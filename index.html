@@ -3,7 +3,7 @@ layout: default
 ---
 
 <body>
-  <h1>軸屋敬介 / Keisuke Jikuya</h1>
+  <h1>滝之弥 / Keisuke Jikuya</h1>
   <div>
     <h2>自己紹介 | Profile</h2>
     <h3>経歴 | History</h3>
@@ -56,29 +56,8 @@ layout: default
   </div>
   <div>
     <h2>研究 | Research</h3>
-    機械学習を用いて異常検知を中心に奮闘中...
+    画像に対する感性指標構築とファインチューニングを用いた印象推定
     <br><br>
     「複雑背景下での異常検知」というタイトルでSSII2022で発表予定です
     <br><br>
 
-   <div>
-     <h2>おまけ(htmlにプログラム載せてみたかっただけ)</h2>
-{% highlight python %}
-import torch
-from modules.loader import DatasetLoader
-
-def train(args, logger, model):
-  dataset = DatasetLoader(args, is_train=True)
-  train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, num_workers=2, pin_memory=True, shuffle=True, drop_last=True)
-
-  for epoch in range(1, args.epochs + 1):
-     for _, (inputs, _) in enumerate(loop):
-      inputs = inputs.to(args.device)
-      outputs = model(inputs)
-
-      optimizer.zero_grad()
-      loss = criterion(outputs, inputs)
-      loss.backward()
-      optimizer.step()
-{% endhighlight %}
-    </div>
